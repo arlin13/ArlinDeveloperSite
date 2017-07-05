@@ -1,17 +1,37 @@
 $(document).ready(function() {
 
+  $('#leftArrow')
+    .on('mouseenter', function() {
+      $(this).addClass('animated infinite bounce');
+    })
+    .on('mouseleave', function() {
+      $(this).removeClass('animated infinite bounce');
+    })
+    .on('click', function() {
+      $('#greeting').addClass('hidden');
+      $('#portfolio').removeClass('hidden');
+    });
+  $('#rightArrow')
+    .on('mouseenter', function() {
+      $(this).addClass('animated infinite bounce');
+    })
+    .on('mouseleave', function() {
+      $(this).removeClass('animated infinite bounce');
+    });
 
-
-  $('#t').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', doSomething);
+  $('#cuteEffect')
+    .one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', doSomething);
 
   function doSomething() {
-    console.log('terminado');
+    $('#cuteEffect').hide();
     $('#t')
       .on('mouseenter', function() {
         $(this).css('color', 'hotpink');
+        $(this).css('font-size', '4.5em');
       })
       .on('mouseleave', function() {
         $(this).css('color', 'white');
+        $(this).css('font-size', '3em');
       });
   }
 });
