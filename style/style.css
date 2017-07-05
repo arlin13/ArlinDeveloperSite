@@ -1,6 +1,4 @@
 #container{
-  /*height: 100vh;
-  background-color: lightblue;*/
 }
 
 #greeting{
@@ -8,8 +6,16 @@
   color: white;
 }
 
-#cuteEffect{
+#aboutMe{
   background-color: hotpink;
+  color: white;
+}
+
+#pinkDiv{
+  background-color: hotpink;
+}
+#lightBlueDiv{
+  background-color: black;
 }
 
 #portfolio{
@@ -31,15 +37,18 @@
   display: table-cell;
   vertical-align: middle;
   text-align: center;
-  font-size: 40px;
 }
 
 .title {
-  font-size: 3em;
+  font-size: 7em;
 }
 
 .subtitle{
-  font-size: 1.5em;
+  font-size: 4em;
+}
+
+.arrow{
+  font-size: 40px;
 }
 
 .pointer{
@@ -54,14 +63,29 @@
   visibility: visible;
 }
 
-/*#upArrow {
-  -vendor-animation-duration: 3s;
-  -vendor-animation-delay: 2s;
-  -vendor-animation-iteration-count: 5;
-}*/
+.rotateLeft{
+  -ms-transform: rotate(-90deg); /* IE 9 */
+  -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+  transform: rotate(-90deg);
+}
 
+.rotateRight{
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+  transform: rotate(90deg);
+}
 
-/*
-.smallbox:hover{
-  transform:scale(1.5, 1.5);
-}*/
+.btn-simple{
+  background-color: transparent;
+  color: white;
+  font-size: 1.8em;
+  border: 1px solid white;
+  border-radius: 7px;
+  padding: 5px;
+}
+
+.btn-simple:hover{
+  text-decoration: none;
+  color:white;
+  font-size: 2em;
+}
