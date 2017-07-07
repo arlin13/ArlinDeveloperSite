@@ -15,7 +15,9 @@
   color: black;
 }
 #contact{
-  background-color: green;
+  /*background-color: #FF383F;*/
+  background-color: #3CC47C;
+  color: #1E392A;
 }
 /* end pages*/
 
@@ -53,6 +55,11 @@
 }
 .pointer{
   cursor: pointer;
+}
+.pointer:hover{
+  -ms-transform: scale(1, 1.1); /* IE 9 */
+  -webkit-transform: scale(1, 1.1); /* Safari */
+  transform: scale(1, 1.1);
 }
 
 .hidden{
