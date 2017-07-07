@@ -24,26 +24,45 @@
         <br>
         <br>
         <div class="row">
-          <div class="col-xs-12 col-md-4">
-            <h2>Education</h2>
-            <br>
-            <h4>
-              <i class="fa fa-graduation-cap" aria-hidden="true"></i>
-              Coding Bootcamp
-            </h4>
-            <p>Feb 2017 - May 2017 - Origin Code Academy</p>
-            <h4>
-              <i class="fa fa-graduation-cap" aria-hidden="true"></i>
-              MBA | Master in Bussiness Administration
-            </h4>
-            <p>Oct 2013 - Apr 2016 - Cetys Universidad</p>
-            <h4>
+          <section name="Education">
+            <div class="col-xs-12 col-md-4">
+              <h2>Education</h2>
+              <br>
+              <h4>
+                <a href="#popupOCA">
+                  <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                  Coding Bootcamp
+                </a>
+              </h4>
+              <p>Feb 2017 - May 2017 - Origin Code Academy</p>
+              <div id="popupOCA" class="overlay">
+                <div class="popup">
+                  <h2>Software Developer Intern</h2>
+                  <a class="close" href="#">&times;</a>
+                  <div class="content">
+                    Origin Code Academy is a boot camp that primarily focuses on full stack web development using the .NET Framework and popular front-end web technologies while also focusing on the secondary skills needed to participate in the enterprise software development lifecycle
+                    <br>
+                    <br> Technologies/Languages/Frameworks:
+                    <br>C#, SQL, Entity Framework, Javascript, JQuery, Angular, NodeJS, HTML, CSS, Bootstrap
+                  </div>
+                </div>
+              </div>
+              <h4>
+                <a href="#popupMBA">
+                  <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                  MBA | Master in Bussiness Administration
+                </a>
+              </h4>
+              <p>Oct 2013 - Apr 2016 - Cetys Universidad</p>
+              <h4>
               <i class="fa fa-graduation-cap" aria-hidden="true"></i>
               Computer Science Software Engineerging
             </h4>
-            <p>Aug 2009 - May 2013 - Cetys Universidad</p>
-          </div>
-          <div class="col-xs-12 col-md-4">
+              <p>Aug 2009 - May 2013 - Cetys Universidad</p>
+            </div>
+          </section>
+          <section name="CodingExperience">
+            <div class="col-xs-12 col-md-4">
             <h2>Coding Experience</h2>
             <br>
             <h3 class="pointer">
@@ -57,9 +76,11 @@
                 <h2>Software Developer</h2>
                 <a class="close" href="#">&times;</a>
                 <div class="content">
-                  Worked here for a year as an intern. During the project I was part of the Software team (Another school from Tijuana developed the hardware part).
-                  We designed and developed a new technological platform dedicated to measure human health conditions using telemtry (Remote monitoring system for hypertension).
-                  It was made on ASP.NET MVC.
+                  I worked at Zorbek for 2 years and 10 months. At the beggining I was told what to do and was mainly working on front-end tasks. With the past of the time I started to help on the design and creation of databases, and in the last months I was going with
+                  clients to gather requirements for new projects or to show them the progress of their website/app.
+                  <br>
+                  <br> Technologies/Languages/Frameworks:
+                  <br>C#, SQL, Entity Framework, LINQ, MVVC, WCF, Silverlight.
                 </div>
               </div>
             </div>
@@ -75,21 +96,43 @@
                 <h2>Software Developer Intern</h2>
                 <a class="close" href="#">&times;</a>
                 <div class="content">
-                  Worked here for a year as an intern. During the project I was part of the Software team (Another school from Tijuana developed the hardware part).
-                  We designed and developed a new technological platform dedicated to measure human health conditions using telemtry (Remote monitoring system for hypertension).
-                  It was made on ASP.NET MVC.
+                  Worked here for a year as an intern. During the project I was part of the Software team (Another school from Tijuana developed the hardware part). We designed and developed a new technological platform dedicated to measure human health conditions using
+                  telemtry (Remote monitoring system for hypertension).
+                  <br>
+                  <br> Technologies/Languages/Frameworks:
+                  <br>C#, SQL, Entity Framework, ASP.NET MVC.
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-xs-12 col-md-4">
+          </section>
+          <section name="Volunteering">
+            <div class="col-xs-12 col-md-4">
             <h2>Volunteering</h2>
             <br>
-            <h4>
-              <i class="fa fa-hand-peace-o" aria-hidden="true"></i>
-              San Diego Startup Weekend
-            </h4>
+            <a href="#popupSDSW">
+              <h4>
+                <i class="fa fa-hand-peace-o" aria-hidden="true"></i>
+                San Diego Startup Weekend
+              </h4>
+            </a>
             <p>2017 - Developer/Idea track support</p>
+            <div id="popupSDSW" class="overlay">
+              <div class="popup">
+                <h2>San Diego Startup Week</h2>
+                <a class="close" href="#">&times;</a>
+                <div class="content">
+                  I was a volunteer in some talks during the week.
+                  <br><br>The task consisted of things like:
+                  <ul>
+                    <li>Make sure the venue is set up properly to fit each event</li>
+                    <li>Test out the Audio/Visual equipment</li>
+                    <li>Help presenters as needed</li>
+                    <li>Make sure attendees have a badge</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
             <h4>
               <i class="fa fa-handshake-o" aria-hidden="true"></i>
               Boys and Girls Club
@@ -101,6 +144,7 @@
             </h4>
             <p>2010 - Teacher assistant</p>
           </div>
+          </section>
           <div class="col-xs-12">
             <a id="downloadResume" href="./about.html" class="btn-simple pointer">Download my resume?</a>
             <h5>(You won't regret it :D)</h5>
