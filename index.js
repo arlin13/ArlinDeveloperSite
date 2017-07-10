@@ -18,7 +18,8 @@ $(document).ready(function() {
     }
 
   function start() {
-    $('#container')
+    // $('#container')
+    $('body')
       .css('background-color', 'rgb(205, 195, 215)');
   }
 
