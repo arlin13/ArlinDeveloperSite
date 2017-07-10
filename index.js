@@ -1,33 +1,35 @@
 $(document).ready(function() {
   start();
 
+  $('#myName')
+    .one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', startSideToSideEffect)
+    .on('mouseenter', function() {
+      $(this).css('font-weight', 'bold');
+      $(this).addClass('pointer');
+    })
+    .on('mouseleave', function() {
+      $(this).css('font-weight', 'normal');
+      $(this).removeClass('pointer');
+    });
+
+    function startSideToSideEffect() {
+      $('#text')
+        .addClass('side-to-side');
+    }
+
   function start() {
-    $('#pinkDiv')
-      .one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', hidePink);
-    $('#lightBlueDiv')
-      .one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', hideBlue);
-    startTextEffect();
-    $('#myName')
-      .on('mouseenter', function() {
-        $(this).css('color', 'hotpink');
-        // $(this).css('font-size', '9em');
-      })
-      .on('mouseleave', function() {
-        $(this).css('color', 'white');
-        // $(this).css('font-size', '7em');
-      });
+    $('#container')
+      .css('background-color', 'rgb(205, 195, 215)');
   }
 
-  function hidePink() {
-    $('#pinkDiv').hide();
-  }
-  function hideBlue() {
-    $('#lightBlueDiv').hide();
-  }
-
-  function startTextEffect() {
-    $('#text1').hide().delay(5500);
-  }
+  $('.slide')
+    .on('mouseenter', function() {
+      // $('#flower1').css('transform', 'scale(1.1, 1.1)');
+      // $('#flower1').css('transition', 'all 1s ease-in-out');
+    })
+    .on('mouseleave', function(){
+      $(this).removeClass('animated infinite rubberBand');
+    });
 
   $('#leftArrow')
     .on('mouseenter', function() {
