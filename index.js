@@ -6,15 +6,15 @@ $(document).ready(function() {
       .one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', hidePink);
     $('#lightBlueDiv')
       .one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', hideBlue);
-
+    startTextEffect();
     $('#myName')
       .on('mouseenter', function() {
         $(this).css('color', 'hotpink');
-        $(this).css('font-size', '9em');
+        // $(this).css('font-size', '9em');
       })
       .on('mouseleave', function() {
         $(this).css('color', 'white');
-        $(this).css('font-size', '7em');
+        // $(this).css('font-size', '7em');
       });
   }
 
@@ -23,6 +23,10 @@ $(document).ready(function() {
   }
   function hideBlue() {
     $('#lightBlueDiv').hide();
+  }
+
+  function startTextEffect() {
+    $('#text1').hide().delay(5500);
   }
 
   $('#leftArrow')

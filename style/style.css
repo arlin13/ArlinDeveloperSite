@@ -16,6 +16,13 @@
   background-color: #3CC47C;
   color: #1E392A;
 }
+
+#myName{
+  margin-top: -35px;
+}
+#myName span{
+  margin: 0 -10px 0 -10px;
+}
 /* end pages*/
 
 /*effects*/
@@ -45,6 +52,10 @@
 }
 .subtitle{
   font-size: 4em;
+}
+
+.cursorText{
+  font-size: 1.7em;
 }
 
 .arrow{
