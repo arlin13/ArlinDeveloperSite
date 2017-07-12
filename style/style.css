@@ -2,70 +2,111 @@ html {
   cursor: crosshair;
   color: white;
 }
-nav{
+
+nav {
   text-align: right;
   padding: 10px;
 }
 
+
 /* start pages*/
-#container{
+
+#container {
   height: 100vh;
   /*min-height: calc(~"100vh - 0");*/
   width: 100vw;
 }
 
+.progress {
+  margin: 20px;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
 #aboutMe {
   background-color: hotpink;
   color: white;
+  display: inline-block;
 }
+
 #portfolio {
   background-color: #94618e;
   color: black;
 }
+
 #contact {
   background-color: #3CC47C;
   color: #1E392A;
 }
 
+
 /*aboutme*/
+
 #flower1 {
   margin-right: -100px;
   margin-bottom: 50px;
   width: 400px;
   height: 200px;
 }
+
 #flower2 {
   margin-left: -200px;
+  margin-bottom: 50px;
   width: 400px;
   height: 200px;
 }
+
+
 /*endaboutme*/
+
 
 /* end pages*/
 
 
 /*ANIMATION*/
-.bobble{
+
+.bobble {
   animation: bobble 5s infinite;
 }
-.bobble-reverse{
+
+.bobble-reverse {
   animation: bobble-reverse 5s infinite;
 }
-.side-to-side{
+
+.side-to-side {
   animation: side-to-side 5s infinite;
 }
+
+
 /*endanimation*/
 
 
 /*CLASSES*/
+
 .cedarville {
   font-family: 'Cedarville Cursive', cursive;
 }
-.amatic{
+
+.amatic {
   font-family: 'Amatic CS', cursive;
 }
-.shadows{
+
+.shadows {
   font-family: 'Shadows Into Light Two', cursive;
+}
+
+.circle {
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  background-color: violet;
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.currentCircle {
+  background-color: black;
 }
 
 .bigbox {
@@ -83,6 +124,7 @@ nav{
 .title {
   font-size: 7em;
 }
+
 .subtitle {
   font-size: 4em;
 }
@@ -118,9 +160,9 @@ nav{
 
 .btn-simple {
   background-color: transparent;
-  color: white;
-  font-size: 1.5em;
-  border: 1px solid white;
+  color: black;
+  font-size: 1.3em;
+  border: 1px dashed black;
   border-radius: 7px;
   padding: 5px;
 }
@@ -128,7 +170,8 @@ nav{
 .btn-simple:hover {
   font-weight: bold;
   text-decoration: none;
-  color: white;
+  color: black;
+  border: 1.7px dashed black;
 }
 
 
@@ -156,7 +199,7 @@ a: hover {
     transform: translate3d(20px, 15px, 0px);
     animation-timing-function: ease-out;
   }
-  40%{
+  40% {
     transform: translate3d(25px, 8px, 0px);
     animation-timing-function: ease-out;
   }
@@ -178,7 +221,7 @@ a: hover {
     transform: translate3d(0px, 0px, 0px);
     animation-timing-function: ease-in;
   }
-  25%{
+  25% {
     transform: translate3d(20px, 15px, 0px);
     animation-timing-function: ease-in;
   }
@@ -194,6 +237,7 @@ a: hover {
     transform: translate3d(0px, 0px, 0px);
   }
 }
+
 @keyframes bobble {
   0% {
     transform: translate3d(50px, 40px, 0px);
@@ -207,6 +251,7 @@ a: hover {
     transform: translate3d(50px, 40px, 0px);
   }
 }
+
 @keyframes bobble-reverse {
   0% {
     transform: translate3d(50px, 50px, 0px);
@@ -220,6 +265,7 @@ a: hover {
     transform: translate3d(50px, 50px, 0px);
   }
 }
+
 
 /*endanimation*/
 

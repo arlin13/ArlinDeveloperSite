@@ -1,26 +1,65 @@
 $(document).ready(function() {
+  var i = 1; //slides i counter
+  var numberOfSlides = 5;
+  var slidesDuration = 6; //seconds
+
   start();
 
   $('#myName')
-    .one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', startSideToSideEffect)
+    .one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', startSideToSideEffect);
+  $('.slide')
     .on('mouseenter', function() {
-      $(this).css('font-weight', 'bold');
-      $(this).addClass('pointer');
+      $('#myName').css('font-weight', 'bold');
+      $('#myName').addClass('pointer');
     })
     .on('mouseleave', function() {
-      $(this).css('font-weight', 'normal');
-      $(this).removeClass('pointer');
+      $('#myName').css('font-weight', 'normal');
+      $('#myName').removeClass('pointer');
     });
 
-    function startSideToSideEffect() {
-      $('#text')
-        .addClass('side-to-side');
-    }
+  function startSideToSideEffect() {
+    $('#text')
+      .addClass('side-to-side');
+  }
 
   function start() {
-    // $('#container')
     $('body')
       .css('background-color', 'rgb(205, 195, 215)');
+    // setInterval
+    setInterval(function() {
+      if (i == 6) {
+        i = 1;
+      }
+      changeSlide(i);
+      i++;
+    }, slidesDuration * 1000);
+  }
+
+  function changeSlide(i) {
+    hideAllSlides();
+    setSlideVisible('slide' + i);
+    changeCircle(i);
+  }
+
+  function hideAllSlides() {
+    $('#slide1').hide();
+    $('#slide2').hide();
+    $('#slide3').hide();
+    $('#slide4').hide();
+    $('#slide5').hide();
+  }
+
+  function setSlideVisible(slideName) {
+    $('#' + slideName).show();
+  }
+
+  function changeCircle(i) {
+    $('#circle1').removeClass('currentCircle');
+    $('#circle1').removeClass('currentCircle');
+    $('#circle1').removeClass('currentCircle');
+    $('#circle1').removeClass('currentCircle');
+    $('#circle1').removeClass('currentCircle');
+    $('#circle' + i).addClass('currentCircle');
   }
 
   $('.slide')
@@ -28,8 +67,8 @@ $(document).ready(function() {
       // $('#flower1').css('transform', 'scale(1.1, 1.1)');
       // $('#flower1').css('transition', 'all 1s ease-in-out');
     })
-    .on('mouseleave', function(){
-      $(this).removeClass('animated infinite rubberBand');
+    .on('mouseleave', function() {
+      // $(this).removeClass('animated infinite rubberBand');
     });
 
   $('#leftArrow')
