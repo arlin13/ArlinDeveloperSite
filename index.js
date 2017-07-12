@@ -1,7 +1,7 @@
 $(document).ready(function() {
   var i = 1; //slides i counter
   var numberOfSlides = 5;
-  var slidesDuration = 7; //seconds
+  var slidesDuration = 10; //seconds
 
   start();
 
@@ -16,11 +16,11 @@ $(document).ready(function() {
       $('#myName').css('font-weight', 'normal');
       $('#myName').removeClass('pointer');
     });
-    $('#circle1').on('click', function() { changeCircle(1); });
-    $('#circle2').on('click', function() { changeCircle(2); });
-    $('#circle3').on('click', function() { changeCircle(3); });
-    $('#circle4').on('click', function() { changeCircle(4); });
-    $('#circle5').on('click', function() { changeCircle(5); });
+    $('#circle1').on('click', function() { changeSlideAndCircle(1, true); });
+    $('#circle2').on('click', function() { changeSlideAndCircle(2, true); });
+    $('#circle3').on('click', function() { changeSlideAndCircle(3, true); });
+    $('#circle4').on('click', function() { changeSlideAndCircle(4, true); });
+    $('#circle5').on('click', function() { changeSlideAndCircle(5, true); });
 
   function start() {
     $('body')
@@ -31,7 +31,7 @@ $(document).ready(function() {
       if (i == 6) {
         i = 1;
       }
-      changeSlide(i);
+      changeSlideAndCircle(i, false);
       i++;
     }, slidesDuration * 1000);
   }
@@ -41,10 +41,12 @@ $(document).ready(function() {
       .addClass('side-to-side');
   }
 
-  function changeSlide(i) {
+  function changeSlideAndCircle(slideNumber, comesFromOnclick) {
+    if (comesFromOnclick)
+      i = slideNumber;
     hideAllSlides();
-    setSlideVisible('slide' + i);
-    changeCircle(i);
+    setSlideVisible('slide' + slideNumber);
+    changeCircle(slideNumber);
   }
 
   function hideAllSlides() {
