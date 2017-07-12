@@ -1,12 +1,12 @@
 $(document).ready(function() {
   var i = 1; //slides i counter
   var numberOfSlides = 5;
-  var slidesDuration = 6; //seconds
+  var slidesDuration = 7; //seconds
 
   start();
 
-  $('#myName')
-    .one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', startSideToSideEffect);
+  // $('#myName')
+  //   .one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', startSideToSideEffect);
   $('.slide')
     .on('mouseenter', function() {
       $('#myName').css('font-weight', 'bold');
@@ -17,15 +17,11 @@ $(document).ready(function() {
       $('#myName').removeClass('pointer');
     });
 
-  function startSideToSideEffect() {
-    $('#text')
-      .addClass('side-to-side');
-  }
-
   function start() {
     $('body')
       .css('background-color', 'rgb(205, 195, 215)');
-    // setInterval
+
+    startSideToSideEffect();
     setInterval(function() {
       if (i == 6) {
         i = 1;
@@ -33,6 +29,11 @@ $(document).ready(function() {
       changeSlide(i);
       i++;
     }, slidesDuration * 1000);
+  }
+
+  function startSideToSideEffect() {
+    $('#text')
+      .addClass('side-to-side');
   }
 
   function changeSlide(i) {
@@ -55,10 +56,10 @@ $(document).ready(function() {
 
   function changeCircle(i) {
     $('#circle1').removeClass('currentCircle');
-    $('#circle1').removeClass('currentCircle');
-    $('#circle1').removeClass('currentCircle');
-    $('#circle1').removeClass('currentCircle');
-    $('#circle1').removeClass('currentCircle');
+    $('#circle2').removeClass('currentCircle');
+    $('#circle3').removeClass('currentCircle');
+    $('#circle4').removeClass('currentCircle');
+    $('#circle5').removeClass('currentCircle');
     $('#circle' + i).addClass('currentCircle');
   }
 
