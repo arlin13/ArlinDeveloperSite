@@ -10,6 +10,9 @@ nav {
 
 
 /* start pages*/
+.polaroid{
+  width: 55%;
+}
 
 .blue{
   background-color: lightblue;
@@ -101,7 +104,12 @@ nav {
 
 
 /*CLASSES*/
-
+.center{
+  text-align: center;
+}
+.bold{
+  font-weight: bold;
+}
 .cedarville {
   font-family: 'Cedarville Cursive', cursive;
 }

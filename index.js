@@ -24,7 +24,8 @@ $(document).ready(function() {
 
   function start() {
     $('body')
-      .css('background-color', 'rgb(205, 195, 215)');
+    .css('background-color', 'rgb(205, 195, 215)');
+      // .css('background-color', 'white');
 
     startSideToSideEffect();
     setInterval(function() {
