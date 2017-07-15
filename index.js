@@ -16,18 +16,35 @@ $(document).ready(function() {
       $('#myName').css('font-weight', 'normal');
       $('#myName').removeClass('pointer');
     });
-    $('#circle1').on('click', function() { changeSlideAndCircle(1, true); });
-    $('#circle2').on('click', function() { changeSlideAndCircle(2, true); });
-    $('#circle3').on('click', function() { changeSlideAndCircle(3, true); });
-    $('#circle4').on('click', function() { changeSlideAndCircle(4, true); });
-    $('#circle5').on('click', function() { changeSlideAndCircle(5, true); });
+  $('#circle1').on('click', function() {
+    changeSlideAndCircle(1, true);
+  });
+  $('#circle2').on('click', function() {
+    changeSlideAndCircle(2, true);
+  });
+  $('#circle3').on('click', function() {
+    changeSlideAndCircle(3, true);
+  });
+  $('#circle4').on('click', function() {
+    changeSlideAndCircle(4, true);
+  });
+  $('#circle5').on('click', function() {
+    changeSlideAndCircle(5, true);
+  });
+  $('#leftArrow').on('click', function() {
+    i = (i === 1) ? i = numberOfSlides : (i-1);
+    changeSlideAndCircle(i, true);
+  });
+  $('#rightArrow').on('click', function() {
+    i = (i === numberOfSlides) ? i = 1 : (i+1);
+    changeSlideAndCircle(i, true);
+  });
 
   function start() {
-    $('body')
-    .css('background-color', 'rgb(205, 195, 215)');
-      // .css('background-color', 'white');
+    $('body').css('background-color', 'rgb(205, 195, 215)');
 
-    startSideToSideEffect();
+    $('#text').addClass('side-to-side');
+
     setInterval(function() {
       if (i == 6) {
         i = 1;
@@ -35,11 +52,6 @@ $(document).ready(function() {
       changeSlideAndCircle(i, false);
       i++;
     }, slidesDuration * 1000);
-  }
-
-  function startSideToSideEffect() {
-    $('#text')
-      .addClass('side-to-side');
   }
 
   function changeSlideAndCircle(slideNumber, comesFromOnclick) {
@@ -86,10 +98,7 @@ $(document).ready(function() {
     })
     .on('mouseleave', function() {
       $(this).removeClass('animated infinite rubberBand');
-    })
-    .on('click', function() {
-      $(this).addClass('animated bounceOutLeft');
-    });
+    });;
 
   $('#rightArrow')
     .on('mouseenter', function() {
