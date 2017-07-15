@@ -52,11 +52,6 @@ nav {
   box-shadow: none;
 }
 
-#portfolio {
-  background-color: #94618e;
-  color: black;
-}
-
 #contact {
   background-color: #3CC47C;
   color: #1E392A;
@@ -114,11 +109,9 @@ nav {
 .cedarville {
   font-family: 'Cedarville Cursive', cursive;
 }
-
 .amatic {
   font-family: 'Amatic CS', cursive;
 }
-
 .shadows {
   font-family: 'Shadows Into Light Two', cursive;
 }
