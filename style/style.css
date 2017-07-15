@@ -15,7 +15,7 @@ nav {
 }
 
 .blue{
-  background-color: lightblue;
+  background-color: rgb(0, 113, 193);
 }
 .orange{
   background-color: orange;
@@ -126,7 +126,8 @@ nav {
   border-radius: 50%;
   width: 15px;
   height: 15px;
-  background-color: violet;
+  background-color: black;
+  /*background-color: violet;*/
   display: inline-block;
   margin: 0 5px;
 }
